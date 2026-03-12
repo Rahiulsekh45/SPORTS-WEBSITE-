@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sports web</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+
+   
+
+    .navbar-nav .nav-item{
+     margin-left: 100px;
+    
+}
+
+
+    .carousel-img {
+      height: 90vh;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+
+    .carousel-caption {
+      bottom: 35%;
+    }
+
+
+    .category-section {
+      padding: 80px 40px;
+    }
+
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+
+    .men-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+
+    .women-flex {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+
+    .new-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+
+    .products {
+      padding: 80px 40px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #dc3545;
+    }
+
+    .carousel-img {
+      height: 90vh;
+      object-fit: cover;
+      filter: brightness(55%);
+    }
+
+    .carousel-caption {
+      bottom: 35%;
+    }
+
+    .carousel-caption h1 {
+      text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+    }
+
+
+    .sport-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sport-img {
+      height: 100vh;
+      /* Full screen height */
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .sport-card:hover .sport-img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+
+  </button>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">Sports</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="/index/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../about/about.html">Clothing</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+    data-bs-interval="4000">
+
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+
+      <div class="carousel-item active">
+        <img src="../img/run.jpg" class="d-block w-100 carousel-img" alt="Nike Collection">
+        <div class="carousel-caption text-center">
+          <h1 class="fw-bold display-4">New Nike Collection</h1>
+          <p class="lead">Upgrade your style with the latest arrivals</p>
+          <a href="#Branded Shoes Collection" class="btn btn-danger btn-lg px-4 mt-3">
+            Shop Now
+          </a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <img src="../img/cricket_MH_DESKTOP_9ef8e0e268.avif" class="d-block w-100 carousel-img" alt="Adidas Collection">
+        <div class="carousel-caption text-center">
+          <h1 class="fw-bold display-4">Adidas Street Wear</h1>
+          <p class="lead">Comfort meets performance</p>
+          <a href="#Branded Shoes Collection" class="btn btn-light btn-lg px-4 mt-3">
+            Explore
+          </a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <img src="../img/Desktop_MH_a38f35aa58.avif" class="d-block w-100 carousel-img" alt="Sneakers">
+        <div class="carousel-caption text-center">
+          <h1 class="fw-bold display-4">Premium Sneakers</h1>
+          <p class="lead">Limited edition drops available now</p>
+          <a href="#Featured Products" class="btn btn-warning btn-lg px-4 mt-3">
+            View Collection
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
+
+
+  <section class="container-fluid p-0">
+    <div class="row g-0">
+
+
+
+      <div class="col-md-6 position-relative">
+        <img src="../img/boy.avif" class="img-fluid w-100" style="height: 100vh; object-fit: cover;">
+
+
+        <div class="position-absolute bottom-0 start-0 p-5 text-white">
+          <h5>Nike Air Force 1</h5>
+          <h2 class="fw-bold">Unmistakable.</h2>
+          <button class="btn btn-light mt-3 px-4">Shop</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex align-items-center justify-content-center"
+        style="background: linear-gradient(to bottom, #44545e, #8fa3ad);">
+
+        <div class="text-center text-white">
+          <h6 class="mb-3">Best Sellers</h6>
+          <h2 class="fw-light mb-4">Refresh Your Sneaker Brands</h2>
+
+
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+            <img src="../img/addi.jpg" style="width:130px; transform: rotate(-10deg);">
+
+            <img src="../img/puma.png" style="width:130px; transform: rotate(5deg);">
+
+            <img src="../img/nike.png" style="width:130px; transform: rotate(-8deg);">
+
+          </div>
+
+          <button class="btn btn-light mt-4 px-4">Shop</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="container-fluid p-0"  id="Shop By Sport">
+
+    <h2 class="fw-bold text-center py-4">Shop By Sport</h2>
+
+    <div class="row g-0">
+
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sport-card">
+          <img src="../img/cri.avif" class="img-fluid w-100 sport-img">
+          <h5 class="text-center mt-3">Cricket</h5>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sport-card">
+          <img src="../img/football.avif" class="img-fluid w-100 sport-img">
+          <h5 class="text-center mt-3">Football</h5>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sport-card">
+          <img src="../img/basket.avif" class="img-fluid w-100 sport-img">
+          <h5 class="text-center mt-3">Basketball</h5>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="sport-card">
+          <img src="../img/swet.avif" class="img-fluid w-100 sport-img">
+          <h5 class="text-center mt-3">Sportswear</h5>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="container py-5" id="Branded Shoes Collection">
+
+    <h2 class="text-center fw-bold mb-5">Branded Shoes Collection</h2>
+
+    <div class="row g-4">
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 1.webp" class="card-img-top product-img" alt="Skechers">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">Skechers Running Shoes</h6>
+            <p class="text-muted mb-2">₹3,999</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 2.avif" class="card-img-top product-img" alt="Adidas">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">Adidas Grand Court</h6>
+            <p class="text-muted mb-2">₹4,499</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 3 (2).webp" class="card-img-top product-img" alt="Puma">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">Puma Sports Sneakers</h6>
+            <p class="text-muted mb-2">₹3,799</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 4.webp" class="card-img-top product-img" alt="Reebok">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">Reebok Classic</h6>
+            <p class="text-muted mb-2">₹3,499</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 5.webp" class="card-img-top product-img" alt="New Balance">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">New Balance 574</h6>
+            <p class="text-muted mb-2">₹5,299</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm product-card">
+          <img src="../img/sh 6.webp" class="card-img-top product-img" alt="Skechers">
+          <div class="card-body text-center">
+            <h6 class="fw-bold">Skechers Casual</h6>
+            <p class="text-muted mb-2">₹3,899</p>
+            <button class="btn btn-dark btn-sm">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="products" id="Featured Products">
+    <h2 class="text-center fw-bold mb-5">Featured Products</h2>
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-3">
+          <div class="product-card">
+            <img src="../img/fea 1.avif" class="w-100">
+            <div class="p-3 text-center">
+              <h5>Nike Air Max</h5>
+              <p>$149.99</p>
+              <button class="btn btn-dark w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="product-card">
+            <img src="../img/fea 2.avif" class="w-100">
+            <div class="p-3 text-center">
+              <h5>Adidas Sneakers</h5>
+              <p>$129.99</p>
+              <button class="btn btn-dark w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="product-card">
+            <img src="../img/fea 3.avif" class="w-100">
+            <div class="p-3 text-center">
+              <h5>Nike Air Max</h5>
+              <p>$149.99</p>
+              <button class="btn btn-dark w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3">
+          <div class="product-card">
+            <img src="../img/fea 4.avif" class="w-100">
+            <div class="p-3 text-center">
+              <h5>Adidas Sneakers</h5>
+              <p>$129.99</p>
+              <button class="btn btn-dark w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Sports</h5>
+          <p>A sports athlete is driven by discipline, powered by passion, and defined by determination.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <p><a href="#Branded Shoes Collection">Branded Shoes Collection</a></p>
+          <p><a href="#Featured Products">Featured Products</a></p>
+          <p><a href="#Shop By Sport">Shop By Sport</a></p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p>Email: rahiulsekh539@gmail.com</p>
+          <p>Phone: +91 8172097296</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
